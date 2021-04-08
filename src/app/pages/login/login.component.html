@@ -1,0 +1,20 @@
+<div class="centered">
+  <h1 style="text-align: center; padding-bottom: 20px;">POC Cypress</h1>
+  <div class="card">
+    <h5 class="card-header">Login</h5>
+    <div class="card-body">
+      <form [formGroup]="form">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="text" formControlName="username" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" formControlName="password" class="form-control" id="pass" placeholder="Enter password">
+        </div>
+        <button type="button" (click)="login()" class="btn btn-primary btn-block">Submit</button>
+      </form>
+      <p style="color: darkred" *ngIf="errorLogin">Incorrect username and/or password</p>
+    </div>
+  </div>
+</div>

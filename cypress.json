@@ -1,0 +1,7 @@
+{
+  "env": {
+    "host": "http://localhost:3000/",
+    "login": "api/login",
+    "data": "api/data"
+  }
+}
