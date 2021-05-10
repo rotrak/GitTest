@@ -1,12 +1,17 @@
-import { TestBed } from '@angular/core/testing';
+
+import { TestBed, async } from '@angular/core/testing';
 
 import { RequestService } from './request.service';
+import { AppModule } from '../app.module';
 
 describe('RequestService', () => {
   let service: RequestService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
+  beforeEach(async() => {
+    TestBed.configureTestingModule({
+      providers:[],
+      imports:[AppModule]
+    });
     service = TestBed.inject(RequestService);
   });
 
