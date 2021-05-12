@@ -12,12 +12,15 @@ import { AuthService } from './services/auth.service';
 import { RequestService } from './services/request.service';
 import { PeopleService } from './services/people.service';
 import {APP_BASE_HREF} from '@angular/common';
+import { ContadorService } from './services/contador.service';
+import { CounterComponent } from './components/counter/counter.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoadingSpinnerComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import {APP_BASE_HREF} from '@angular/common';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService,RequestService,PeopleService,{provide:APP_BASE_HREF,useValue:'/src/app'},HttpClient],
+  providers: [AuthService,RequestService,PeopleService,{provide:APP_BASE_HREF,useValue:'/src/app'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

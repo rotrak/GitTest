@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PeopleService } from '../../services/people.service';
 import { RequestService } from '../../services/request.service';
 import { AuthService } from '../../services/auth.service';
+import { ContadorService } from '../../services/contador.service';
 
 @Component({
   selector: 'app-home',
@@ -12,8 +13,12 @@ export class HomeComponent implements OnInit {
 
   clicked = false;
   people = [];
+  @Input() contador=0;
 
-  constructor(private peopleService: PeopleService, private reqService: RequestService, private authService: AuthService) { }
+  constructor(private peopleService: PeopleService, 
+    private reqService: RequestService,
+     private authService: AuthService
+   ) { }
 
   ngOnInit(){
 
@@ -39,4 +44,5 @@ export class HomeComponent implements OnInit {
     }
   }
 
+ 
 }

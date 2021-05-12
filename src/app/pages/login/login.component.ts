@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
       this.reqService.setLoading(true)
       this.authService.login(this.form.get('username').value, this.form.get('password').value).subscribe(resp => {
         this.reqService.setLoading(false);
+        this.errorLogin = true;
         this.authService.startSession();
         this.router.navigate(['/home']);
       }, (error) => {

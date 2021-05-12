@@ -1,0 +1,10 @@
+<div>
+    <h2>
+      Contador
+    </h2>
+    <h3 role="textoContador">Su numero es <span data-testid='value'>{{contService.getValue()}}</span> </h3>
+  </div>
+  <div>
+  <button class="button" role="button" name="Incrementar"  class="btn btn-primary" (click)="contService.increment()">Incrementar</button>
+  <button class="button" role="button" name="Decrementar"  class="btn btn-primary" (click)="contService.decrement()">Decrementar</button>
+</div>
