@@ -10,31 +10,8 @@ import { provideMock, Mock, createMock } from '@testing-library/angular/jest-uti
 import { PeopleService } from '../../services/people.service';
 
 import { of } from 'rxjs';
-import userEvent from '@testing-library/user-event';
 
 describe('HomeComponents', () => {
-// describe('ContadorService', () => {
-//   let component: HomeComponent;
-//   let fixture: ComponentFixture<HomeComponent>;
-
-//   beforeEach((() => {
-//     TestBed.configureTestingModule({
-//       declarations: [  ],
-//       providers:[],
-//       imports:[AppModule]
-//     })
-//     .compileComponents();
-//   }));
-
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(HomeComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
-
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
 
    test('Check row', async()=>{
 
@@ -80,8 +57,10 @@ describe('HomeComponents', () => {
      expect(screen.getAllByRole('fila').length).toEqual(1);
         
      fireEvent.click(bDelete);
+     
 
     expect(screen.getByText('This is a danger alert—check it out!')).toBeTruthy();
+    expect(bDelete).toBeDisabled();
 
   })
 

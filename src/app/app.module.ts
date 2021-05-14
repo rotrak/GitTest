@@ -14,13 +14,15 @@ import { PeopleService } from './services/people.service';
 import {APP_BASE_HREF} from '@angular/common';
 import { ContadorService } from './services/contador.service';
 import { CounterComponent } from './components/counter/counter.component';
+import { ChuckComponent } from './pages/chuck/chuck.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoadingSpinnerComponent,
     LoginComponent,
     HomeComponent,
-    CounterComponent
+    CounterComponent,
+    ChuckComponent
   ],
   imports: [
     BrowserModule,

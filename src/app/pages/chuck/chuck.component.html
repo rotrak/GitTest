@@ -1,0 +1,15 @@
+
+<div class="center" *ngIf="chuck">
+    <div style="max-width: 60%;">
+
+        <button  class="btn btn-primary btn-block" [routerLink]="['/home']"  >Ir a home</button>
+        <img data-testid='img' src={{chuck.icon_url}}/>
+        
+        <br>
+        
+        <h3 data-testid="dataChuck">{{chuck.value}}</h3>
+        <button  class="btn btn-primary btn-block" data-testid="botonCargar" (click)="cargar()"  >Recargar</button>
+    
+    </div>
+
+</div>
